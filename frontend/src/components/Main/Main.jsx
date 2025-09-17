@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import "./main.css"
 import "./mediaquerie.css"
 import Feedback from '../feedback/Feedback'
@@ -14,6 +13,7 @@ import linkedin from '../../assets/linkedin.png'
 import miranda1 from '../../assets/miranda1.jpeg'
 import sundown from '../../assets/sundown.png'
 import project1 from '../../assets/project-1.png'
+import CardSwiper from "../swiper/CardSwiper"
 
 
 const Main = () => {
@@ -246,58 +246,14 @@ const Main = () => {
                         <img src={arrow} alt="arrow icon" class="icon arrow" />
                     </a>
                 </section>
-                <section id="Projects">
+                <div id="Projects">
                     <p class="section__text__p1">Browse my recent</p>
                     <h1 class="title">Projects</h1>
-                    <div class="experience-details-container">
-                        <div class="about-containers">
-                            <div class="details-container color-container">
-                                <div class="article-container">
-                                    <img src={miranda1} alt="project 1" class="project-img" />
-                                </div>
-
-                                <h2 class="experience-sub-title project-title">Miranda Paper portfolio-Clone</h2>
-                                <div class="btn-container">
-                                    <button class="btn btn-color-2 project-btn"
-                                    ><a href="https://github.com/harsh-dev29">GitHub</a></button>
-                                    <button class="btn btn-color-2 project-btn"
-                                        onclick="location.href='https://teal-lamington-98b067.netlify.app/'">Demo</button>
-                                </div>
-                            </div>
-                            <div class="details-container color-container">
-                                <div class="article-container">
-                                    <img src={sundown} alt="project 1" class="project-img" />
-                                </div>
-
-                                <h2 class="experience-sub-title project-title">Sundown Studio-Clone</h2>
-                                <div class="btn-container">
-                                    <button class="btn btn-color-2 project-btn"
-                                        onclick="location.href='https://github.com/harsh-dev29/sundown-studio-clone'">GitHub</button>
-                                    <button class="btn btn-color-2 project-btn"
-                                        onclick="location.href='https://stalwart-gingersnap-28d947.netlify.app/'">Demo</button>
-                                </div>
-
-                            </div>
-                            <div class="details-container color-container">
-                                <div class="article-container">
-                                    <img src={project1} alt="project 1" class="project-img" />
-                                </div>
-
-                                <h2 class="experience-sub-title project-title">Nike landig page </h2>
-                                <div class="btn-container">
-                                    <button class="btn btn-color-2 project-btn"
-                                        onclick="location.href='https://github.com/harsh-dev29/nike-shoes-landing-page'">GitHub</button>
-                                    <button class="btn btn-color-2 project-btn"
-                                        onclick="location.href='https://harsh-dev29.github.io/nike-shoes-landing-page/'">Demo</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <CardSwiper sundown={sundown} project1={project1} miranda1={miranda1} />
                     <a href="#footer">
                         <img src={arrow} alt="arrow icon" class="icon arrow " />
                     </a>
-                </section>
+                </div>
                 <section id="Contact">
                     <p class="section__text__p1">Get in Touch</p>
                     <h1 class="title">
@@ -333,7 +289,6 @@ const Main = () => {
                     </p>
                 </footer>
             </div>
-
         </>
     )
 }
