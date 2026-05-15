@@ -32,10 +32,10 @@ const page = () => {
         </div>
       </div>
       <div className=' flex '>
-        <div className='flex absolute right-6 top-10'>
+        <div className='flex absolute right-6 top-10 '>
           <Image src={profile} height={700} widht={300} alt='image'/>
         </div>
-        <div className='mt-10'><NavBar /></div>
+        <div className='mt-10 z-10 relative'><NavBar /></div>
         </div>
       </div>
       
