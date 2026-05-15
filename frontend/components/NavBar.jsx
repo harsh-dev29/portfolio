@@ -5,19 +5,24 @@ import React from 'react'
 import arc from '../public/arc.jpeg'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
+import {motion} from 'motion/react'
 const NavBar = () => {
   return (
-    <div className='h-125 w-24 bg-black rounded-lg flex flex-col justify-between'>
+    <motion.div initial={{opacity:0,x:100}} animate={{opacity:1,x:0,
+      duration:3,  
+    }}
+    transition={{duration:.5}}
+     className='h-125 w-24 bg-black rounded-lg flex flex-col justify-between'>
       <div className='h-fit flex items-center justify-center w-full font-black p-3'>
-      <h1 className='text-6xl font-bold '>
+      <h1 className='text-6xl text-white font-bold '>
 N<br />A<br />V
       </h1>
       </div>
-        <div className='h-max bottom-0 flex flex-col justify-end items-center p-3 gap-2'>
+        <div className='h-max bottom-0 flex  flex-col justify-end items-center p-3 gap-2'>
            <button onClick={()=>{
             window.open('https://www.linkedin.com/in/harsh-vishnoi-webdev/')
            }} className='h-12 w-12 flex bottom-0 items-center justify-center rounded-full bg-gray-900 cursor-pointer '>  
-              <RiLinkedinLine className='' />
+              <RiLinkedinLine color='white' />
            </button>
            <button onClick={()=>{
             window.open('/resume.pdf')
@@ -39,7 +44,7 @@ N<br />A<br />V
            </button>
           
         </div>
-    </div>
+    </motion.div>
   )
 }
 
